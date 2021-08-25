@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/m"
+        android:icon="@drawable/fav"
+        android:title="My Favorite" />
+    <item
+        android:id="@+id/E"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Exite" />
+    <item
+        android:id="@+id/H"
+        android:icon="@drawable/home"
+        android:title="Home page" />
+
+</menu>
