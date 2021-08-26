@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,84 +19,118 @@ public class HomaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homa);
 
-        /*  Button cook = (Button) findViewById(R.id.Co);
+          Button cook = (Button) findViewById(R.id.co);
 
          cook.setOnClickListener(new View.OnClickListener(){
             @Override
            public void onClick (View v)  {
-                intent i = new Intent (MainActivity.this, هنا .class);
-                startActivity(i);
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","Cook books");
+                startActivity(j);
         } });
-         /* Button classic =(Button)findViewById(R.id.CL);
-        classic.setOnClickListener(new View.OnClickListener(){
-        Override
+
+
+        Button classic =(Button)findViewById(R.id.cl);
+        findViewById(R.id.cl).setOnClickListener(new View.OnClickListener(){
+       @Override
            public void onClick (View v)  {
-          Intent j = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-            startActivity(j);
-        } });
+
+          Intent j = new Intent (HomaActivity.this, BookActivity.class);
+          j.putExtra("a1","classics");
+          startActivity(j);
+        }
+        });
+
+        Button romance =(Button)findViewById(R.id.R);
+        romance.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)  {
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","romance");
+                startActivity(j);
+            } });
+
        Button Fantasy =(Button)findViewById(R.id.F);
          Fantasy.setOnClickListener(new View.OnClickListener(){
-          @Override
-          public void onClick (View v)  {
-         Intent f = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-        startActivity(f);
-         } });
+             @Override
+             public void onClick (View v)  {
+                 Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                 j.putExtra("a1","fantasy");
+                 startActivity(j);
+             }
+         });
+
+        Button short_stories  =(Button)findViewById(R.id.SH);
+        short_stories.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)  {
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","short stories");
+                startActivity(j);
+            } });
+
+        Button mystery =(Button)findViewById(R.id.M);
+        mystery .setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)  {
+
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","mystery");
+                startActivity(j);
+            } });
+
+        Button science =(Button)findViewById(R.id.SCI);
+        science.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)  {
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","science fiction");
+                startActivity(j);
+            } });
+
+
          Button Horror =(Button)findViewById(R.id.H);
          Horror.setOnClickListener(new View.OnClickListener(){
           @Override
           public void onClick (View v)  {
-          Intent h = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-         startActivity(h);
+              Intent j = new Intent (HomaActivity.this, BookActivity.class);
+              j.putExtra("a1","Horror");
+              startActivity(j);
          } });
-          Button mystery =(Button)findViewById(R.id.M);
-         mystery .setOnClickListener(new View.OnClickListener(){
-         @Override
-         public void onClick (View v)  {
-            Intent m = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-        startActivity(m);
-          } });
-        Button myfav=(Button)findViewById(R.id.MY);
+
+
+        Button poety =(Button)findViewById(R.id.P);
+        poety.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)  {
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","Poetry");
+                startActivity(j);
+            } });
+
+
+        Button scientific =(Button)findViewById(R.id.SC);
+        scientific.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)  {
+                Intent j = new Intent (HomaActivity.this, BookActivity.class);
+                j.putExtra("a1","Thriller Books");
+                startActivity(j);
+            } });
+
+
+
+       /* Button myfav=(Button)findViewById(R.id.MY);
           myfav.setOnClickListener(new View.OnClickListener(){
          @Override
          public void onClick (View v)  {
             Intent u = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
          startActivity(u);
-           } });
-         Button science =(Button)findViewById(R.id.SCI);
-        science.setOnClickListener(new View.OnClickListener(){
-          @Override
-          public void onClick (View v)  {
-          Intent s = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-         startActivity(s);
-          } });
-        Button short_stories  =(Button)findViewById(R.id.SH);
-         short_stories.setOnClickListener(new View.OnClickListener(){
-           @Override
-          public void onClick (View v)  {
-         Intent sh = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-         startActivity(sh);
-          } });
-         Button romance =(Button)findViewById(R.id.R);
-          romance.setOnClickListener(new View.OnClickListener(){
-          @Override
-         public void onClick (View v)  {
-          Intent r = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-           startActivity(r);
-          } });
-         Button poety =(Button)findViewById(R.id.P);
-         poety.setOnClickListener(new View.OnClickListener(){
-           @Override
-         public void onClick (View v)  {
-            Intent b = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-        startActivity(b);
-           } });
-         Button scientific =(Button)findViewById(R.id.SC);
-         scientific.setOnClickListener(new View.OnClickListener(){
-         @Override
-         public void onClick (View v)  {
-          Intent si = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-         startActivity(si);
-         } });*/
+           } });*/
+
+
+
+
     }
 
     @Override

@@ -36,7 +36,6 @@ public class Fav_database  extends SQLiteOpenHelper {
         values.put("nameuser",user_name);
         values.put("namebook",book_name);
         db.insert("fav" ,null,values) ;
-
         db.close();
     }
     public boolean check_user(){
@@ -55,8 +54,6 @@ public class Fav_database  extends SQLiteOpenHelper {
                 arrayList.add(book);
             }
             while (cursor.moveToNext()) ;
-
-
 
         }
         return arrayList ;

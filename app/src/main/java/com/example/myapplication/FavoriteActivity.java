@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class FavoriteActivity extends AppCompatActivity {
+
 
     ListView  list_book;
     Fav_database db;
@@ -21,10 +23,11 @@ public class FavoriteActivity extends AppCompatActivity {
 
 
         list_book=(ListView)findViewById(R.id.list_book);
+
         db=new Fav_database(this);
+        ArrayList<myfavorites> data = db.getalldata();
 
-        ArrayList<myfavorites> data =db.getalldata();
-
+        //Toast.makeText(FavoriteActivity.this,"gggg",Toast.LENGTH_LONG).show();
 
         Adpter_Favorite Adpter=new Adpter_Favorite(this, R.layout.list_item_fav, data);
         list_book.setAdapter(Adpter);

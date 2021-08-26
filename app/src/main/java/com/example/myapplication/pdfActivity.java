@@ -16,10 +16,10 @@ public class pdfActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf);
 
-        /*Intent data = getIntent();
+        Intent data = getIntent();
         String s = data.getExtras().getString("a1");
 
         p = (PDFView) findViewById(R.id.pdfView) ;
-        p.fromAsset(s+".pdf").load();*/
+        p.fromAsset(s+".pdf").load();
     }
 }

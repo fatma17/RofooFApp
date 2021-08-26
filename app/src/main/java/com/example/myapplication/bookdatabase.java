@@ -19,7 +19,7 @@ public class bookdatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create table book ( name TEXT , type TEXT )");
+        sqLiteDatabase.execSQL("create table book ( name TEXT , type TEXT , image bolb)");
     }
 
     @Override
@@ -28,28 +28,36 @@ public class bookdatabase extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public void insert(String bookname ,String booktybe  )
+    public void insert(String bookname ,String booktybe  , int bookimage  )
     {
         SQLiteDatabase s = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("name",bookname);
         values.put("type",booktybe);
+        values.put("image",bookimage);
         s.insert("book" ,null,values) ;
     }
 
 
-    public ArrayList<bookmodel> getdata() {
+    public ArrayList<bookmodel> getdata( String tbook) {
         ArrayList<bookmodel> arrayList = new ArrayList<bookmodel>() ;
         SQLiteDatabase s = this.getReadableDatabase();
-        Cursor cursor = s.rawQuery("select * from book", null);
+        Cursor cursor = s.rawQuery("select * from book where type =? ", new String[] { tbook });
         cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
+        while (!cursor.isAfterLast() ) {
 
-            arrayList.add(new bookmodel(cursor.getString(0),cursor.getString(1)));
+
+            arrayList.add(new bookmodel(cursor.getString(0),cursor.getString(1),cursor.getInt(2)));
             cursor.moveToNext();
+
         }
         return arrayList ;
     }
 
+    public  void delete_book(){
+        SQLiteDatabase db = this.getWritableDatabase();
+         db.execSQL("delete  from book");
+        db.close();
+    }
 
 }

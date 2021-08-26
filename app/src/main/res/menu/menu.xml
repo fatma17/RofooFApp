@@ -6,7 +6,6 @@
 
     <item
         android:id="@+id/m"
-        android:icon="@drawable/fav"
         android:title="My Favorite" />
     <item
         android:id="@+id/E"
