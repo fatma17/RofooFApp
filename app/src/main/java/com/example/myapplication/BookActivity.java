@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -50,9 +52,9 @@ public class BookActivity extends AppCompatActivity {
         BOOKS.insert("the_place_where_chicago_was"             ,"short stories",R.drawable.was);
         BOOKS.insert("The Story of an Hour"                    ,"short stories",R.drawable.hour);
 
-        BOOKS.insert("Hamlet"                    ,"Horror",R.drawable.home);
-        BOOKS.insert("The castle of otranto"                    ,"Horror",R.drawable.home);
-        BOOKS.insert("The valley of fear"                    ,"Horror",R.drawable.home);
+        BOOKS.insert("Hamlet"                    ,"Horror",R.drawable.hamelt);
+        BOOKS.insert("The castle of otranto"                    ,"Horror",R.drawable.otranto);
+        BOOKS.insert("The valley of fear"                    ,"Horror",R.drawable.fear);
 
         BOOKS.insert("free_stonesoup_ecookbook"                    ,"Cook books",R.drawable.c);
         BOOKS.insert("USU-Student-Cookbook-FINAL-1"                    ,"Cook books",R.drawable.b);
@@ -62,9 +64,9 @@ public class BookActivity extends AppCompatActivity {
         BOOKS.insert("Poems of 1980"                    ,"Poetry",R.drawable.a2);
         BOOKS.insert("The golden book of modern English"                    ,"Poetry",R.drawable.a3);
 
-        BOOKS.insert("dracula"                                         ,"Thriller Books" , R.drawable.home);
-        BOOKS.insert("The Last Man"                            ,"Thriller Books", R.drawable.home);
-        BOOKS.insert("The riddle of sand"           ,"Thriller Books", R.drawable.home);
+        BOOKS.insert("dracula"                                         ,"Thriller Books" , R.drawable.dracula);
+        BOOKS.insert("The Last Man"                            ,"Thriller Books", R.drawable.lastman);
+        BOOKS.insert("The riddle of sand"           ,"Thriller Books", R.drawable.riddle);
 
 
         ArrayList<bookmodel> mm = BOOKS.getdata(s);
@@ -83,4 +85,5 @@ public class BookActivity extends AppCompatActivity {
         });
 
     }
+
 }

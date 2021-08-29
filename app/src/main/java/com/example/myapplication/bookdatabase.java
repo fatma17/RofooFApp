@@ -19,12 +19,12 @@ public class bookdatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create table book ( name TEXT , type TEXT , image bolb)");
+        sqLiteDatabase.execSQL("create table books ( name TEXT , type TEXT , image bolb)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("drop table if exists book ");
+        sqLiteDatabase.execSQL("drop table if exists books ");
         onCreate(sqLiteDatabase);
     }
 
@@ -35,14 +35,15 @@ public class bookdatabase extends SQLiteOpenHelper {
         values.put("name",bookname);
         values.put("type",booktybe);
         values.put("image",bookimage);
-        s.insert("book" ,null,values) ;
+        s.insert("books" ,null,values) ;
+        s.close();
     }
 
 
     public ArrayList<bookmodel> getdata( String tbook) {
         ArrayList<bookmodel> arrayList = new ArrayList<bookmodel>() ;
         SQLiteDatabase s = this.getReadableDatabase();
-        Cursor cursor = s.rawQuery("select * from book where type =? ", new String[] { tbook });
+        Cursor cursor = s.rawQuery("select * from books where type =? ", new String[] { tbook });
         cursor.moveToFirst();
         while (!cursor.isAfterLast() ) {
 
@@ -56,7 +57,7 @@ public class bookdatabase extends SQLiteOpenHelper {
 
     public  void delete_book(){
         SQLiteDatabase db = this.getWritableDatabase();
-         db.execSQL("delete  from book");
+         db.execSQL("delete  from books");
         db.close();
     }
 

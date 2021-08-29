@@ -177,22 +177,6 @@
         app:layout_constraintVertical_bias="0.023"
         tools:fontFamily="@font/diplomata" />
 
-    <Button
-        android:id="@+id/MY"
-        android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:backgroundTint="#12647E"
-        android:fontFamily="sans-serif-light"
-        android:text="My Favorite"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="171dp"

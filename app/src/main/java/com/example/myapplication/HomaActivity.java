@@ -119,18 +119,6 @@ public class HomaActivity extends AppCompatActivity {
             } });
 
 
-
-       /* Button myfav=(Button)findViewById(R.id.MY);
-          myfav.setOnClickListener(new View.OnClickListener(){
-         @Override
-         public void onClick (View v)  {
-            Intent u = new Intent (MainActivity.this,  هنا اسم الصفحة .class)
-         startActivity(u);
-           } });*/
-
-
-
-
     }
 
     @Override
@@ -147,11 +135,6 @@ public class HomaActivity extends AppCompatActivity {
         }
         if (id == R.id.H) {
             Toast.makeText(this, "Home page", Toast.LENGTH_SHORT).show();
-        }
-        if (id == R.id.m) {
-            Toast.makeText(this, " My Favorite page ", Toast.LENGTH_SHORT).show();
-            // Intent intent = new Intent(MainActivity.this, المضلة اسم .class);
-            //  startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

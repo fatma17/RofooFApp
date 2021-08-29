@@ -14,7 +14,7 @@ public class DataBaseclass extends SQLiteOpenHelper {
     public DataBaseclass(Context context1){
         super(context1 ,DataBaseName,null ,1 );
     }
-   // database creation
+    // database creation
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table users ( Name text not null,Email text primary key, Password text not null )");
@@ -39,10 +39,10 @@ public class DataBaseclass extends SQLiteOpenHelper {
         AppDataBase=getReadableDatabase();
         String [] RowDetails= {"Email","Password"};
         Cursor cursor =AppDataBase.rawQuery("select * from users where Email =? and Password =?",new String[] {email , password});
-       if (cursor.getCount()>0)
-                return true;
-       else
-           return false;
+        if (cursor.getCount()>0)
+            return true;
+        else
+            return false;
     }
     // checking whether the email already exists or not
     public boolean exist (String EMail){

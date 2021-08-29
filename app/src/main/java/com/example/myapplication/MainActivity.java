@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import com.example.myapplication.*;
 
-
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -43,11 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
                     if (found) {
                         Toast.makeText(MainActivity.this,"logged in successfully",Toast.LENGTH_LONG).show();
-                        //logged in successfully
-                        if(emailvalue.equals("Admin@gmail.com")&& passwordvalue.equals(1111)){
-                            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-                            startActivity(intent);
-                        }
+                        Intent intent = new Intent(getApplicationContext(), HomaActivity.class);
+                        startActivity(intent);
+
                     }
                     else if (!found)
                     {
@@ -61,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         SignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),HomaActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
             } });
     }
